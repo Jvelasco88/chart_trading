@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Trading Chart Design System - Professional Financial Interface */
+
+@layer base {
+  :root {
+    /* Financial Dark Theme */
+    --background: 222 20% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 222 18% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 222 18% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Trading Colors */
+    --primary: 142 76% 36%;  /* Success Green */
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 222 16% 18%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 222 16% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 217 91% 60%;  /* Chart Blue */
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 72% 51%;  /* Loss Red */
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 222 16% 20%;
+    --input: 222 16% 18%;
+    --ring: 142 76% 36%;
+
+    /* Trading Specific Colors */
+    --bullish: 142 76% 36%;     /* Green for gains */
+    --bearish: 0 72% 51%;       /* Red for losses */
+    --neutral: 210 10% 65%;     /* Gray for neutral */
+    
+    /* SMA Colors */
+    --sma-20: 60 100% 50%;      /* Yellow */
+    --sma-50: 217 91% 60%;      /* Blue */
+    --sma-150: 280 100% 70%;    /* Purple */
+    --sma-200: 33 100% 50%;     /* Orange */
+
+    /* Chart Background */
+    --chart-bg: 222 20% 10%;
+    --chart-grid: 222 16% 25%;
+
+    /* Financial Gradients */
+    --gradient-bullish: linear-gradient(135deg, hsl(var(--bullish)), hsl(142 76% 45%));
+    --gradient-bearish: linear-gradient(135deg, hsl(var(--bearish)), hsl(0 72% 60%));
+    --gradient-chart: linear-gradient(180deg, hsl(var(--chart-bg)), hsl(222 18% 12%));
+    
+    /* Financial Shadows */
+    --shadow-card: 0 8px 32px -8px hsl(222 20% 4% / 0.4);
+    --shadow-popup: 0 20px 60px -12px hsl(222 20% 4% / 0.6);
+    --shadow-glow: 0 0 20px hsl(var(--accent) / 0.3);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Override for dark mode if needed */
+    --background: 222 20% 8%;
+    --foreground: 210 20% 95%;
+    --card: 222 18% 12%;
+    --card-foreground: 210 20% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
